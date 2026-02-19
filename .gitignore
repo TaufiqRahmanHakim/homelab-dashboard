@@ -1,0 +1,56 @@
+# Dependencies
+backend/vendor/
+frontend/node_modules/
+
+# Build outputs
+backend/bin/
+backend/pkg/
+frontend/dist/
+frontend/build/
+
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+go.work
+
+# SQLite database
+*.db
+*.sqlite
+*.sqlite3
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Docker
+*.log
+docker-compose.override.yml
+
+# Screenshots (optional - uncomment if you want to exclude)
+# screenshoot-web/*.png
+# screenshoot-web/*.jpg
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+prd.md

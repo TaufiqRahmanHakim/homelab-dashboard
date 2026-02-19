@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.backend
+    container_name: homelab-backend
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    volumes:
+      - homelab_data:/root/data
+    environment:
+      - DATABASE_PATH=/root/data/homelab.db
+      - METRICS_INTERVAL=5
+      - PORT=8080
+    # Access to host system for metrics (Linux only)
+    # Uncomment below for host metrics access
+    # pid: host
+    # volumes:
+    #   - /:/host:ro,rslave
+    networks:
+      - homelab-network
+
+  frontend:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.frontend
+    container_name: homelab-frontend
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - homelab-network
+
+volumes:
+  homelab_data:
+    driver: local
+
+networks:
+  homelab-network:
+    driver: bridge
