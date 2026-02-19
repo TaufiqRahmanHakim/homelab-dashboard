@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Plus, Server, RefreshCw, Layers, AlertCircle, Inbox } from 'lucide-react';
+import { Plus, Server, RefreshCw, AlertCircle, Inbox } from 'lucide-react';
 import { Application, CreateApplicationRequest } from '../types';
 import { api } from '../utils/api';
 import { MetricsDisplay } from './MetricsDisplay';
