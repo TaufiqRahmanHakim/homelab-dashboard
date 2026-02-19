@@ -9,7 +9,9 @@ A modern, self-hosted dashboard for managing your homelab applications and monit
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.2+-3178C6?logo=typescript)
 ![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker)
 
-![Dashboard Preview](./screenshoot-web/dashboard-preview.png)
+## Dashboard Preview
+<img width="1907" height="970" alt="image" src="https://github.com/user-attachments/assets/cc600c7f-8bf1-44b8-8af4-e4269f8e2e66" />
+
 
 ---
 
